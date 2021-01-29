@@ -4,7 +4,7 @@ const { interface, bytecode } = require('./compile');
 
 const provider = new HDWalletProvider(
   'call glow acoustic vintage front ring trade assist shuffle mimic volume reject',
-  'https://rinkeby.infura.io/orDImgKRzwNrVCDrAk5Q'
+  'https://rinkeby.infura.io/v3/25b0245a6a6e47d3af40f4d15c2ffb82'
 );
 const web3 = new Web3(provider);
 
