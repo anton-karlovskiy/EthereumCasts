@@ -1,7 +1,9 @@
+
 import React, { Component } from 'react';
+
 import './App.css';
-import web3 from './web3';
-import lottery from './lottery';
+import web3 from './ethereum/web3';
+import lottery from './ethereum/lottery';
 
 class App extends Component {
   state = {
