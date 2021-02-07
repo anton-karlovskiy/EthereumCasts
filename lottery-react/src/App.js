@@ -19,7 +19,11 @@ class App extends Component {
     const players = await lottery.methods.getPlayers().call();
     const balance = await web3.eth.getBalance(lottery.options.address);
 
-    this.setState({ manager, players, balance });
+    this.setState({
+      manager,
+      players,
+      balance
+    });
   }
 
   onSubmit = async event => {
@@ -67,7 +71,7 @@ class App extends Component {
             <label>Amount of ether to enter</label>
             <input
               value={this.state.value}
-              onChange={event => this.setState({ value: event.target.value })}
+              onChange={event => this.setState({ value: event.currentTarget.value })}
             />
           </div>
           <button>Enter</button>
