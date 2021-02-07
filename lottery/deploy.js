@@ -1,10 +1,12 @@
 
 const HDWalletProvider = require('truffle-hdwallet-provider');
 const Web3 = require('web3');
+
 const {
   interface,
   bytecode
 } = require('./compile');
+
 const {
   MNEMONIC,
   INFURA_RINKEBY_ENDPOINT
@@ -23,9 +25,7 @@ const deploy = async () => {
   // Attempting to deploy from account 0xcF01971DB0CAB2CBeE4A8C21BB7638aC1FA1c38c
 
   const result = await new web3.eth.Contract(JSON.parse(interface))
-    .deploy({
-      data: bytecode
-    })
+    .deploy({ data: bytecode })
     .send({
       gas: '1000000',
       from: accounts[0]
